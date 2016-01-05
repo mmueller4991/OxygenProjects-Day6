@@ -3,14 +3,12 @@
 function CalcPayEmployee(hours, rate)  {
 	var result;
 	result = hours * rate
-	return result;
 	console.log(result)
 }
 
 function CalcTotPayEmployee(regular, overtime) {
 	var total;
 	total = regular + overtime
-	return total;
 	console.log(total)
 }
 
