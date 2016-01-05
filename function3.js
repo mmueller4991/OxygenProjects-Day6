@@ -1,19 +1,25 @@
 "use strict "
 
-function CalcTotPayEmployee(hours, rate)  {
+function CalcPayEmployee(hours, rate)  {
 	var result;
 	result = hours * rate
 	return result;
 	console.log(result)
 }
 
+function CalcTotPayEmployee(regular, overtime) {
+	var total;
+	total = regular + overtime
+	return total;
+	console.log(total)
+}
+
 var EmployeeAhours;
 var EmployeeArate;
-var EmployeeATotPay;
 EmployeeAhours = 34;
 EmployeeArate = 17 + 24/100;
 
-EmployeeATotPay = CalcTotPayEmployee(EmployeeAhours, EmployeeArate);
+EmployeeATotPay = CalcPayEmployee(EmployeeAhours, EmployeeArate);
 
 console.log(EmployeeAhours);
 console.log(EmployeeArate);
@@ -21,14 +27,25 @@ console.log(EmployeeATotPay);
 
 var EmployeeBhours;
 var EmployeeBrate;
-var EmployeeBTotPay;
 EmployeeBhours = 40;
 EmployeeBrate = 23 + 43/100;
 
-EmployeeBregularPay = CalcTotPayEmployee(EmployeeBhours, EmployeeBrate)
+EmployeeBregularPay = CalcPayEmployee(EmployeeBhours, EmployeeBrate);
 
+console.log("EmployeeBregularPay= " , EmployeeBregularPay);
 
-console.log(EmployeeBregularPay)
+var EmployeeBhours;
+var EmployeeBrate;
+EmployeeBhours = 7;
+EmployeeBrate = 23 + 43/100 + 23/2 + 43/200;
+
+EmployeeBovertimePay = CalcPayEmployee(EmployeeBhours, EmployeeBrate);
+
+EmployeeBTotPay = CalcTotPayEmployee(EmployeeBregularPay, EmployeeBovertimePay)
+
+console.log("EmployeeBovertimePay= " , EmployeeBovertimePay);
+console.log("EmployeeBTotPay= " , EmployeeBTotPay);
+
 
 
 
